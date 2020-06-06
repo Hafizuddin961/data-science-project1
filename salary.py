@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jun  6 22:01:06 2020
+
+@author: hafizuddin
+"""
+
+import glassdoor_scrapper as gs
+import pandas as pd
+
+path = "C:/Users/hafizuddin/Documents/Data-Science-Project1/chromedriver"
+
+df = gs.get_jobs(False, 15, False, path, 15)
