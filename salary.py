@@ -10,4 +10,6 @@ import pandas as pd
 
 path = "C:/Users/hafizuddin/Documents/Data-Science-Project1/chromedriver"
 
-df = gs.get_jobs(False, 15, False, path, 15)
+df = gs.get_jobs(False, 150, False, path, 15)
+
+df.to_csv(r'C:/Users/hafizuddin/Documents/Data-Science-Project1/salary_150.csv', index = False)
