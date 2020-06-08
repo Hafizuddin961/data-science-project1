@@ -1,0 +1,81 @@
+Linear Regression Simplified - Ordinary Least Square vs Gradient Descent
+
+Sum of Squared Errors (SSE)
+-compare the lines to find out the best fit by reducing errors
+-y = mx + c (m = if x increase 1, how much y increase) (c = if x is 0, how much is y)
+-OLS 	- relationship between 1 or more independent variables and a dependent variable
+	- α and β denote intercept and slope value
+	- a and b denote parameters in the sample
+	- minimizes the amount of error between the predicted values of Y and 
+	  the actual values of Y
+	- a and b are known as OLS coefficients
+	- coefficient of determination (R^2)
+		- when multiplied by 100, represents the percentage amount of variation in Y
+		- values range from +1 to 0 
+			- 1.0 = the X variable perfectly accounts for variation in Y
+			- 0.0 = X variable does not account for any of the variation in Y
+
+Gradient Descent Algorithm
+- minimise the cost function (1 of the best optimisation algorithms)
+- difference of actual value and predicted value
+- applying various parameters for theta 0 and theta 1
+	- change values for theta 0 and theta 1 and identifies the rate of change
+	- best minimum, repeat steps to apply various values for theta 0 and theta 1
+	  (repeat steps until convergence)
+- see the slope intercept until it reaches convergence
+- Partial derivatives represents the rate of change of the functions as the variable change
+- Types:
+	- Batch Gradient Descent
+		- sum all training examples for each steps
+		- If we have 3 millions samples (m training examples) then the gradient descent 
+		  algorithm should sum 3 millions samples for every epoch.
+		  To move a single step, we have to calculate each with 3 million times!
+		- not good fit for large datasets
+	
+	- Stochastic Gradient Descent (SGD)
+		- use one example or one training sample at each iteration instead of
+		  using whole dataset to sum all for every steps
+		- widely used for larger dataset trainings and computationally faster 
+		  and can be trained in parallel
+		- Need to randomly shuffle the training examples before calculating it
+
+	- Mini-Batch Gradient Descent
+		- similar like SGD, it uses n samples instead of 1 at each iteration
+
+Ridge and Lasso Regression
+- difference with linear regression is the addition of the l1 penalty in Lasso Regression 
+  and the l2 penalty in Ridge Regression
+- penalty is two ensure there is regularization, shrinking the weights of the model to zero
+  or close to zero to ensure that the model does not overfit the data.
+- Ridge Regression
+	- creates a solution that minimizes the cost function such that the values of w0 and w1
+          can only be from points within or on the circumference of the circle
+	- Lambda is a hyper-parameter that we tune
+	- If it is set to zero then the equation of ridge gets converted to that of normal linear regression
+- Lasso Regression
+	- Ridge regression has one small flaw when there are two features that are highly correlated with each other
+	- the weights are equally distributed between those two features implying there will be two features with 
+  	  lesser value of coefficients rather than one feature with strong coefficients
+	- plot the points for the constrain, there will be a diamond that is created with (0,0) as center
+	- cost function is either negative 1 or positive 1 and at point 0 it cannot be determined
+	- not feasible to update the weights of the features using closed form approach or gradient descent
+	- uses something called coordinate descent to update the weights
+
+Reference: 	1) https://towardsdatascience.com/linear-regression-simplified-ordinary-least-
+	      	   square-vs-gradient-descent-48145de2cf76
+
+		2) https://www.encyclopedia.com/social-sciences/applied-and-social-sciences-magaz
+		   ines/ordinary-least-squares-regression#:~:text=Ordinary%20least%20squares%20(OLS)
+		   %20regression,and%20predicted%20values%20of%20the
+
+
+
+
+
+
+
+
+
+
+
+
