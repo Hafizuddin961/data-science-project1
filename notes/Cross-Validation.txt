@@ -16,6 +16,17 @@ intro
   are capturing the relationship better, or we are just over-fitting the data
 - use validation techniques to helps us in achieving more generalized relationships
 
+- When evaluating different settings (“hyperparameters”) for estimators, such as the C setting 
+  that must be manually set for an SVM, there is still a risk of overfitting on the test set 
+  because the parameters can be tweaked until the estimator performs optimally
+- This way, knowledge about the test set can “leak” into the model and evaluation metrics no 
+  longer report on generalization performance
+- another part of the dataset can be held out as a so-called “validation set”: training proceeds
+  on the training set, after which evaluation is done on the validation set, and when the experiment 
+  seems to be successful, final evaluation can be done on the test set.
+- cross-validation (CV for short) is used to overcome problem of samples reduction due to partitioning
+  the data into three sets (training, validation and test).
+
 Cross Validation
 - steps:
 	1) reserve a sample data set
@@ -64,8 +75,8 @@ Cross Validation
 
 
 Reference:
-	1)https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/
-
+	1) https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/
+	2) https://scikit-learn.org/stable/modules/cross_validation.html
 
 	
 

@@ -42,6 +42,25 @@ Gradient Descent Algorithm
 	- Mini-Batch Gradient Descent
 		- similar like SGD, it uses n samples instead of 1 at each iteration
 
+Ridge and Lasso Regression
+- difference with linear regression is the addition of the l1 penalty in Lasso Regression 
+  and the l2 penalty in Ridge Regression
+- penalty is two ensure there is regularization, shrinking the weights of the model to zero
+  or close to zero to ensure that the model does not overfit the data.
+- Ridge Regression
+	- creates a solution that minimizes the cost function such that the values of w0 and w1
+          can only be from points within or on the circumference of the circle
+	- Lambda is a hyper-parameter that we tune
+	- If it is set to zero then the equation of ridge gets converted to that of normal linear regression
+- Lasso Regression
+	- Ridge regression has one small flaw when there are two features that are highly correlated with each other
+	- the weights are equally distributed between those two features implying there will be two features with 
+  	  lesser value of coefficients rather than one feature with strong coefficients
+	- plot the points for the constrain, there will be a diamond that is created with (0,0) as center
+	- cost function is either negative 1 or positive 1 and at point 0 it cannot be determined
+	- not feasible to update the weights of the features using closed form approach or gradient descent
+	- uses something called coordinate descent to update the weights
+
 Reference: 	1) https://towardsdatascience.com/linear-regression-simplified-ordinary-least-
 	      	   square-vs-gradient-descent-48145de2cf76
 

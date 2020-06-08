@@ -35,7 +35,8 @@ import statsmodels.api as sm
 x_sm = x = sm.add_constant(x)
 model = sm.OLS(y,x_sm)
 model.fit().summary()
-
+'''
+unknown error of import module LinearRegression - use google colab instead
 from sklearn.linear_model import LinearRegression, Lasso
 from sklearn.model_selection import cross_val_score
 
@@ -43,7 +44,12 @@ lm = LinearRegression()
 lm.fit(X_train, y_train)
 
 np.mean(cross_val_score(lm,X_train,y_train, scoring = 'neg_mean_absolute_error', cv= 3))
+''' 
+
 #lasso regression
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import LinearRegression
+
 # random forest
 # tune model GridsearchCV
 #test example
