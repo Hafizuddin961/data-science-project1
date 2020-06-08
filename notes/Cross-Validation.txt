@@ -1,0 +1,72 @@
+Cross Validation
+
+intro
+- models lose stability
+	- underfitting - model fails to capture the underlying trend of the data
+	- fit - found the right relationship i.e., low training error and 
+		generalization of the relationship
+	- overfitting 	- almost zero training error
+			- relationship is developed by considering each deviation in
+			  the data point (including noise)
+			- i.e., the model is too sensitive and captures random patterns 
+			  which are present only in the current dataset
+			- could be a high deviation
+- iterate over various models to find a better performing model
+- becomes difficult to distinguish whether this improvement in score is coming because we 
+  are capturing the relationship better, or we are just over-fitting the data
+- use validation techniques to helps us in achieving more generalized relationships
+
+Cross Validation
+- steps:
+	1) reserve a sample data set
+	2) Train the model using the remaining part of the dataset
+	3) Use the reserve sample of the test (validation) set
+		- help in gauging the effectiveness of model’s performance
+		- If your model delivers a positive result on validation data, 
+		  go ahead with the current model
+- methods used:
+	1) validation set approach
+		- reserve 50% of the dataset for validation and the remaining 
+		  50% for model training
+		- major disadvantage: huge possibility that we might miss out on some 
+		  interesting information about the data which will lead to a higher bias
+	2) Leave one out cross validation (LOOCV)
+		- reserve only one data point from the available dataset, and train the model 
+		  on the rest of the data
+		- advantage and disadvantage:
+			- make use of all data points, hence the bias will be low
+			- repeat the cross validation process n times (where n is number of data 
+			  points) which results in a higher execution time
+			- leads to higher variation in testing model effectiveness because we 
+			  test against one data point
+			- So, estimation gets highly influenced by the data point. If the 
+			  data point turns out to be an outlier, it can lead to a higher variation
+- conclusion this 2 method:
+	- should train the model on a large portion of the dataset. Otherwise fail to read and
+	  recognise the underlying trend in the data. This will eventually result in a higher bias	
+	- need a good ratio of testing data points. less amount of data points can lead to a variance error
+	- should iterate on the training and testing process multiple times. We should change the train and 
+	  test dataset distribution. This helps in validating the model effectiveness properly	
+	
+	3) k-fold cross validation
+		1) Randomly split your entire dataset into k”folds”
+		2) For each k-fold in your dataset, build your model on k – 1 folds of the dataset. Then,
+		   test the model to check the effectiveness for kth fold
+		3) Record the error you see on each of the predictions
+		4) Repeat this until each of the k-folds has served as the test set
+		5) average of your k recorded errors - determine model performance
+		
+		- a lower value of k is more biased, and hence undesirable
+		- a higher value of K is less biased, but can suffer from large variability
+		- important to know that a smaller value of k always takes us towards Validation Set 
+		  approach, whereas a higher value of k leads to LOOCV approach.
+
+
+
+Reference:
+	1)https://www.analyticsvidhya.com/blog/2018/05/improve-model-performance-cross-validation-in-python-r/
+
+
+	
+
+
