@@ -33,8 +33,26 @@ Cleaned up the data and extract the important features such as:
 * Convert some number from string format to integer format for easy in process EDA
 
 # Exploratory Data Analysis (EDA)
-Make data visulization to get easier understanding of the data and make descriptive analysis after that
+Make data visulization to get easier understanding of the data and make descriptive analysis after that<br/>
+Here the example of result:<br/>
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/avg-salary.png)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/hist%20rating.png)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/heatmap.png)<br/>
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/graf-ownership.png)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/graph-revenue.png)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/bot-plot-rating.png)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/bot-plot-salary.png)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/pivot-seniority.JPG)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/pivot-sector.JPG)
+![alt text](https://github.com/Hafizuddin961/data-science-project1/blob/master/example%20result/revenue-pivot.JPG)
 
+# Model Building & performance
+Transformed the categorical variables into dummy variables. then, split the data into train and tests sets with a test size of 20%.
+Tried three different models and evaluated them using Mean Absolute Error. 
+
+*	**Random Forest** : MAE = 11.22
+*	**Linear Regression**: MAE = 18.86
+*	**Ridge Regression**: MAE = 19.67
 
 
 ## Reference and more info
