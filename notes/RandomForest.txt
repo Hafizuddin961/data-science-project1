@@ -1,0 +1,4 @@
+Random Forest
+
+- decision tree as a series of yes/no questions asked about our data eventually leading to a
+  predicted class
