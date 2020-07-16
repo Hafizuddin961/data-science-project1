@@ -1,6 +1,6 @@
 # data-science-project1
-This my first full project on data science that in include data collection using web scrapper, cleaning the data, make exploratory data 
-analysis(EDA) and applying machine learning model to estimate data scientist salary
+This my first full project on data science that in include data collection using web scrapper, cleaning the data, make Exploratory Data 
+Analysis (EDA) and applying machine learning model to estimate data scientist salary
 
 # Data Science Salary Estimator: Project Overview
 * Created a model that estimates data science salaries with result of Mean Absolute Error (MAE) ~$11K 
